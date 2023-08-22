@@ -2,14 +2,13 @@ algoritmo "semnome"
 var
 A, B: real
 
+//calculo de media
+
 inicio
 Escreva ("Nota 1: ")
 Leia (A)
 Escreva ("Nota 2: ")
 Leia (B)
-Escreva ("A média entre ", A, " e ", B, " é igual a ", (A+B)/2, ".")
-
-//O antecessor de 9 é 8
-//O sucessor de 9 é 10
+Escreva ("A mÃ©dia entre ", A, " e ", B, " Ã© igual a ", (A+B)/2, ".")
 
 fimalgoritmo
