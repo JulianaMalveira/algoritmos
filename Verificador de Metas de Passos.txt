@@ -1,4 +1,6 @@
-/* Proposição do Problema: O Verificador de Metas de Passos
+/* PORTUGOL
+
+Proposição do Problema: O Verificador de Metas de Passos
 Contexto: Você quer criar um programa para ajudar uma pessoa a monitorar sua caminhada durante 3 dias. O programa deve registrar quantos passos a pessoa deu em cada um desses dias e, ao final, calcular o total acumulado. Se a soma total de passos for igual ou superior a 10.000, o programa deve dar os parabéns pela meta atingida. Caso contrário, deve incentivar a pessoa a caminhar mais.
 
 --------------------------------------------------------------------------------
