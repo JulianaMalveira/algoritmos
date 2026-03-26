@@ -1,0 +1,75 @@
+/* Proposição do Problema: O Verificador de Metas de Passos
+Contexto: Você quer criar um programa para ajudar uma pessoa a monitorar sua caminhada durante 3 dias. O programa deve registrar quantos passos a pessoa deu em cada um desses dias e, ao final, calcular o total acumulado. Se a soma total de passos for igual ou superior a 10.000, o programa deve dar os parabéns pela meta atingida. Caso contrário, deve incentivar a pessoa a caminhar mais.
+
+--------------------------------------------------------------------------------
+Sua Tarefa (Etapa 1)
+Seguindo o modelo de aprendizado da nossa disciplina, prepare a solução estruturada preenchendo os 5 itens abaixo:
+Decomposição: Como você divide esse monitoramento em tarefas menores?
+Abstração: O que é essencial para o programa e o que pode ser ignorado?
+Padrões: Quais processos se repetem (ex: pedir o dado para o usuário)?
+Pensamento Lógico:
+Entradas: O que o programa recebe?
+Regras: Qual o limite da meta?
+Processamento: Como você chega ao total?
+Saída: O que o programa diz no final?
+Algoritmo: Escreva o passo a passo (pseudocódigo) da sua solução.
+Dica: Tente pensar em como usar um vetor de 3 posições e um laço de repetição para somar os valores, como vimos nos exemplos de cálculo de média.
+*/
+
+/* Decomposição:
+Total de dias de caminhada: 03
+Entrada: Quantidade de passos dia 01
+Entrada: Quantidade de passos dia 02
+Entrada: Quantidade de passos dia 03
+
+Processamento: Total acumulado de passos dos 03 dias: soma
+
+Regra (Condição): 
+
+- Se a soma total de passos for igual ou superior a 10.000, o programa deve dar os parabéns pela meta atingida. 
+
+- Caso contrário, deve incentivar a pessoa a caminhar mais.
+
+Saída: 
+
+Mensagens: 
+- Parabéns pela meta atingida!
+- Você precisa caminhar mais.
+
+*/
+
+
+programa {
+  funcao inicio() {
+    inteiro quantidadePassosDiarios[3][2] = {
+      {1,0},
+      {2,0},
+      {3,0}
+
+    }
+
+     para (inteiro contador = 0; contador < 3; contador++) {
+      escreva("Quantos passos você deu no dia " + quantidadePassosDiarios [contador][0])
+      escreva("\n")
+      
+      leia(quantidadePassosDiarios[contador][1])
+    }
+escreva (totalAcumuladoDePassos(quantidadePassosDiarios)) 
+
+  }
+
+  funcao cadeia totalAcumuladoDePassos (inteiro quantidadePassosDiarios[][]) {
+     inteiro somaDePassos = 0
+
+     para (inteiro contador = 0; contador < 3; contador++) {
+      somaDePassos = somaDePassos + quantidadePassosDiarios [contador][1]
+         
+  }  
+
+   se (somaDePassos >= 10000) {
+         retorne ("Parabéns pela meta atingida! Sua soma de passos foi: " + somaDePassos)
+
+     }
+      retorne ("Você precisa caminhar mais. Sua soma de passos foi: " + somaDePassos)
+}
+}
